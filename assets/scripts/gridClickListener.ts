@@ -15,11 +15,11 @@ export class GridClickListener extends Component {
         this.unregisterForClick();
         this.node.active = true;
         this._owner = owner;
-        this.node.on(Node.EventType.MOUSE_DOWN, this.spaceClicked, this);
+        this.node.on(Node.EventType.TOUCH_END, this.spaceClicked, this);
     }
 
     unregisterForClick(){
-        this.node.off(Node.EventType.MOUSE_DOWN, this.spaceClicked, this);
+        this.node.off(Node.EventType.TOUCH_END, this.spaceClicked, this);
     }
 
     spaceClicked(event: any){

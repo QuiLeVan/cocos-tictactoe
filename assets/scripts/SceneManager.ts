@@ -52,11 +52,11 @@ export class SceneManager extends Component {
     }
 
     onEnable () {
-        systemEvent.on(SystemEvent.EventType.MOUSE_DOWN, this.handleMouseClick, this);
+        systemEvent.on(SystemEvent.EventType.TOUCH_START, this.handleMouseClick, this);
     }
 
     onDisable(){
-        this.node.off('mousedown', this.handleMouseClick);
+        this.node.off(SystemEvent.EventType.TOUCH_START, this.handleMouseClick);
     }
 
     handleGameState() {

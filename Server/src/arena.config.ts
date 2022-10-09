@@ -7,7 +7,7 @@ import { monitor } from "@colyseus/monitor";
 import { TicTacToe } from "./rooms/tictactoe";
 
 export default Arena({
-    getId: () => "Your Colyseus App",
+    getId: () => "68d9e047e9c2f904d1e1fec154439e78",
 
     initializeGameServer: (gameServer) => {
         /**
